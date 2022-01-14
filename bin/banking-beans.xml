@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+	<context:annotation-config></context:annotation-config>
+
+<!-- 	<bean id="acct1" class="com.softra.Account" lazy-init="false" scope="singleton"> -->
+<!-- 		<constructor-arg index="0" value="1001"></constructor-arg> -->
+<!-- 		<constructor-arg index="1" value="10"></constructor-arg> -->
+<!-- 	</bean> -->
+	
+<!-- 	<bean id="bs1" class="com.softra.Customer" lazy-init="false" scope="singleton"  -->
+<!-- 		init-method="doStartUp" destroy-method="doCleanUp">	 -->
+<!--  		<constructor-arg index="0" value="Ho"></constructor-arg>  -->
+<!--  		<constructor-arg index="1" value="Patrick"></constructor-arg>  -->
+<!--  		<constructor-arg index="2" value="#{customerConfig['ssn']}"></constructor-arg>  -->
+<!--   		<constructor-arg index="3" ref="acct1"></constructor-arg> -->
+<!--   		<property name="fdList"> -->
+<!--   			<list> -->
+<!--   				<bean id="FixedDeposit1" class="com.softra.FixedDeposit" lazy-init="true" scope="Singleton"> -->
+<!-- 					<property name="acctNo" value="10001"></property> -->
+<!-- 					<property name="amount" value="111"></property> -->
+<!-- 					<property name="maturityDate" value="2021-01-01"></property> -->
+<!-- 				</bean> -->
+<!-- 				<bean id="FixedDeposit2" class="com.softra.FixedDeposit" lazy-init="true" scope="Singleton"> -->
+<!-- 					<property name="acctNo" value="10002"></property> -->
+<!-- 					<property name="amount" value="222"></property> -->
+<!-- 					<property name="maturityDate" value="2021-01-02"></property> -->
+<!-- 				</bean> -->
+<!--   			</list> -->
+  		
+<!--   		</property> -->
+  		
+<!-- 		<property name="lname" value="Ho"></property>  -->
+<!--  		<property name="fname" value="Patrick"></property> -->
+<!--  		<property name="ssn" value="101"></property> -->
+		
+<!-- 	</bean> -->
+
+
+<!-- 	<bean id="bs1" class="com.softra.Customer" lazy-init="false" scope="singleton"> -->
+<!-- 		<property name="lname" value="Ho"></property> -->
+<!-- 		<property name="fname" value="Patrick"></property> -->
+<!-- 		<property name="ssn" value="101"></property> -->
+<!-- 	</bean> -->
+<!-- 	<bean id="bs2" class="com.softra.Customer" lazy-init="false" scope="singleton"> -->
+<!-- 		<property name="lname" value="Lam"></property> -->
+<!-- 		<property name="fname" value="Gala"></property> -->
+<!-- 		<property name="ssn" value="102"></property> -->
+<!-- 	</bean> -->
+	<util:properties id="customerConfig" location="classpath:customer.properties"></util:properties>
+</beans>
